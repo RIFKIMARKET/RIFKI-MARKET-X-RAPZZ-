@@ -1,2 +1,547 @@
 # RIFKI-MARKET-X-RAPZZ-
 Create you business website!!!
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIFKI MARKET X RAPZZ - Jasa Web Design Modern & Premium</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- RESET & VARIABLES --- */
+        :root {
+            --bg-main: #0b0b0f;
+            --bg-card: #14141e;
+            --bg-card-hover: #1c1c2b;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --primary: #7c3aed; /* Purple */
+            --primary-glow: rgba(124, 58, 237, 0.4);
+            --secondary: #06b6d4; /* Cyan */
+            --gradient-accent: linear-gradient(135deg, #7c3aed 0%, #06b6d4 100%);
+            --font: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font);
+            background-color: var(--bg-main);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* --- NAVBAR --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(11, 11, 15, 0.8);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-muted);
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-main);
+        }
+
+        .btn-nav {
+            background: var(--gradient-accent);
+            padding: 10px 22px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 14px;
+            box-shadow: 0 4px 15px var(--primary-glow);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn-nav:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(6, 182, 212, 0.4);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            padding: 180px 0 100px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 500px;
+            height: 500px;
+            background: var(--primary);
+            filter: blur(150px);
+            opacity: 0.15;
+            z-index: -1;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 span {
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+        }
+
+        .hero-ctas {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn-primary {
+            background: var(--gradient-accent);
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            box-shadow: 0 4px 20px var(--primary-glow);
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(124, 58, 237, 0.6);
+        }
+
+        .btn-secondary {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.02);
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* --- SECTION GENERAL --- */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: var(--text-muted);
+            font-size: 16px;
+        }
+
+        /* --- FEATURES --- */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            padding: 40px 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            background: var(--bg-card-hover);
+            border-color: rgba(124, 58, 237, 0.3);
+        }
+
+        .feature-icon {
+            font-size: 32px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        /* --- PRICING --- */
+        .pricing {
+            background: rgba(255, 255, 255, 0.01);
+            position: relative;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            align-items: stretch;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .price-card {
+            background: var(--bg-card);
+            border-radius: 20px;
+            padding: 45px 35px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s;
+        }
+
+        .price-card.popular {
+            border: 2px solid var(--primary);
+            box-shadow: 0 10px 30px rgba(124, 58, 237, 0.15);
+            transform: translateY(-10px);
+        }
+
+        .badge {
+            position: absolute;
+            top: -15px;
+            right: 35px;
+            background: var(--gradient-accent);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .price-card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .price-card .desc {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        .price-amount {
+            font-size: 54px;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: baseline;
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .price-subtext {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .price-features {
+            margin-bottom: 40px;
+            flex-grow: 1;
+        }
+
+        .price-features li {
+            margin-bottom: 16px;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            color: #e5e7eb;
+        }
+
+        .price-features li::before {
+            content: '✓';
+            color: var(--secondary);
+            font-weight: bold;
+            margin-right: 12px;
+            font-size: 16px;
+        }
+
+        .price-card.popular .price-features li::before {
+            color: var(--primary);
+        }
+
+        .btn-pricing {
+            display: block;
+            text-align: center;
+            padding: 14px;
+            border-radius: 8px;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .price-card.popular .btn-pricing {
+            background: var(--gradient-accent);
+            border: none;
+            box-shadow: 0 4px 15px var(--primary-glow);
+        }
+
+        .btn-pricing:hover {
+            background: #fff;
+            color: #000;
+            transform: translateY(-2px);
+        }
+
+        .price-card.popular .btn-pricing:hover {
+            background: #fff;
+            color: #000;
+            box-shadow: 0 6px 20px rgba(255,255,255,0.2);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 50px 0;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        footer p span {
+            color: var(--secondary);
+        }
+
+        /* --- RESPONSIVITAS --- */
+        @media (max-width: 768px) {
+            .nav-links, .btn-nav {
+                display: none; 
+            }
+            .hero h1 {
+                font-size: 38px;
+            }
+            .hero p {
+                font-size: 16px;
+            }
+            .hero-ctas {
+                flex-direction: column;
+                gap: 12px;
+            }
+            .price-card.popular {
+                transform: translateY(0);
+            }
+            section {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">RIFKI MARKET X RAPZZ</a>
+            <nav class="nav-links">
+                <a href="#fitur">Keunggulan</a>
+                <a href="#harga">Harga</a>
+            </nav>
+            <a href="https://wa.me/62895320954749?text=Halo%20RIFKI%20MARKET%20X%20RAPZZ,%20saya%20mau%20konsultasi%20desain%20web" target="_blank" class="btn-nav">Konsultasi Gratis</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <h1>Bikin Bisnis Anda Stand Out<br>Dengan <span>Web Desain Modern</span></h1>
+            <p>Desain premium, fully-responsive, berkecepatan tinggi, dan siap melejitkan jualan Anda. Mulai dari 2K saja.</p>
+            <div class="hero-ctas">
+                <a href="#harga" class="btn-primary">Lihat Paket Harga</a>
+                <a href="https://wa.me/62895320954749?text=Halo%20RIFKI%20MARKET%20X%20RAPZZ,%20saya%20mau%20tanya-tanya%20dulu%20tentang%20jasa%20web" target="_blank" class="btn-secondary">Tanya-Tanya Dulu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section id="fitur">
+        <div class="container">
+            <div class="section-title">
+                <h2>Mengapa Memilih Kami?</h2>
+                <p>Kami tidak hanya membuat web asal jadi, melainkan karya seni digital penunjang konversi bisnis.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">📱</span>
+                    <h3>Mobile Friendly</h3>
+                    <p>Tampilan layout super rapi dan adaptif saat diakses dari gadget apa pun.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🚀</span>
+                    <h3>Fast Loading</h3>
+                    <p>Optimasi performa kode tingkat tinggi agar web terbuka dalam hitungan milidetik.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🔍</span>
+                    <h3>SEO Optimized</h3>
+                    <p>Struktur kode yang ramah mesin pencari, mempermudah web masuk halaman satu Google.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🎨</span>
+                    <h3>Custom Design</h3>
+                    <p>Desain otentik yang disesuaikan khusus dengan identitas brand unik Anda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section id="harga" class="pricing">
+        <div class="container">
+            <div class="section-title">
+                <h2>Pilihan Paket Investasi Web</h2>
+                <p>Harga transparan tanpa biaya tersembunyi. Pilih paket yang sesuai kebutuhan skala bisnis Anda.</p>
+            </div>
+            <div class="pricing-grid">
+                
+                <!-- Paket 2K -->
+                <div class="price-card">
+                    <h3>Starter Package</h3>
+                    <p class="desc">Cocok untuk personal branding, portofolio, atau landing page produk tunggal.</p>
+                    <div class="price-amount">2K</div>
+                    <div class="price-subtext">Paket lengkap / Sekali bayar</div>
+                    <ul class="price-features">
+                        <li>1 Halaman Utama (Landing Page)</li>
+                        <li>Gratis Domain (.com) & Hosting 1 Thn</li>
+                        <li>Desain Responsif & Premium</li>
+                        <li>Integrasi Direct Chat WhatsApp</li>
+                        <li>Revisi Maksimal 2x</li>
+                    </ul>
+                    <a href="https://wa.me/62895320954749?text=Halo%20RIFKI%20MARKET%20X%20RAPZZ,%20saya%20tertarik%20dengan%20Paket%20Starter%202K" target="_blank" class="btn-pricing">Pilih Paket</a>
+                </div>
+
+                <!-- Paket 3K -->
+                <div class="price-card popular">
+                    <div class="badge">TERPOPULER 🔥</div>
+                    <h3>Business Package</h3>
+                    <p class="desc">Sempurna untuk Company Profile perusahaan, UMKM berkembang, & bisnis lokal.</p>
+                    <div class="price-amount">3K</div>
+                    <div class="price-subtext">Paket lengkap / Sekali bayar</div>
+                    <ul class="price-features">
+                        <li>Hingga 5 Halaman Konten</li>
+                        <li>Gratis Domain & Hosting High Performance</li>
+                        <li>Fitur Blog / Manajemen Artikel</li>
+                        <li>Integrasi Google Maps & Analytics</li>
+                        <li>Revisi Maksimal 4x</li>
+                        <li>Free Maintenance 1 Bulan</li>
+                    </ul>
+                    <a href="https://wa.me/62895320954749?text=Halo%20RIFKI%20MARKET%20X%20RAPZZ,%20saya%20tertarik%20dengan%20Paket%20Business%203K" target="_blank" class="btn-pricing">Ambil Promo</a>
+                </div>
+
+                <!-- Paket 5K -->
+                <div class="price-card">
+                    <h3>Premium Custom</h3>
+                    <p class="desc">Solusi total untuk E-Commerce (Toko Online) atau web dengan fitur kompleks.</p>
+                    <div class="price-amount">5K</div>
+                    <div class="price-subtext">Paket lengkap / Sekali bayar</div>
+                    <ul class="price-features">
+                        <li>Halaman Unlimited / Sistem Toko Online</li>
+                        <li>Sistem Pembayaran Otomatis (Payment Gateway)</li>
+                        <li>Integrasi Hitung Ongkir Otomatis</li>
+                        <li>Keamanan Tingkat Tinggi (SSL Premium)</li>
+                        <li>Revisi Sampai Puas</li>
+                        <li>Premium Support & Maintenance 3 Bulan</li>
+                    </ul>
+                    <a href="https://wa.me/62895320954749?text=Halo%20RIFKI%20MARKET%20X%20RAPZZ,%20saya%20tertarik%20dengan%20Paket%20Premium%205K" target="_blank" class="btn-pricing">Hubungi Kami</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 RIFKI MARKET X RAPZZ. Crafted with <span>❤️</span> for modern businesses.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
